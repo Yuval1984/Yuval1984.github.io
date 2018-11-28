@@ -95,16 +95,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _store_mystore_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store/mystore.component */ "./src/app/store/mystore.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _store_list_store_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./store/list-store.component */ "./src/app/store/list-store.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _store_list_store_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/list-store.component */ "./src/app/store/list-store.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -118,12 +116,11 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _store_mystore_component__WEBPACK_IMPORTED_MODULE_4__["MystoreComponent"],
-                _store_list_store_component__WEBPACK_IMPORTED_MODULE_6__["ListStoreComponent"]
+                _store_list_store_component__WEBPACK_IMPORTED_MODULE_5__["ListStoreComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]
             ],
             providers: [],
@@ -155,7 +152,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "      <div class=\"split left\">\n        <div class=\"panel panel-primary\">\n                      <div class=\"panel-heading\" id=\"grad1\">\n                          <h2 class=\"panel-title\">My Store</h2>\n                            <button class=\"btn\" id=\"addbutton\">\n                                      <i class=\"fa fa-plus\"></i> Add\n                            </button>\n                        <div class=\"nav\">\n                            <div class=\"search-container\">\n                                <input type=\"text\" [(ngModel)]=\"searching\" placeholder=\"Search Products\" name=\"search\">\n                                <button type=\"submit\" (click)=\"search()\">\n                                          <i class=\"fa fa-search\" style=\"font-size:12px;\"></i>\n                                </button>\n                                <span class=\"slider round\"></span>\n                            </div>\n                        </div>\n\n                        <p style=\n                        \"position: absolute;\n                        font-family: Arial;\n                        right: 150px;\n                        top: 53px;\">Sort By</p>\n                        \n                          <div class=\"custom-select\">\n                                <select [(ngModel)]=\"sorting\" (ngModelChange)='sort($event)'>\n                                  <option value=\"0\" >Name</option>\n                                  <option value=\"1\" >Price</option>\n                                  <option value=\"2\" >Recently Added\n                                  </option>\n                                </select>\n                          </div>\n\n                        <form #Primary=\"ngForm\">\n                              <div style=\"overflow-x:auto;\" class=\"panel-body\" (click)=\"current_store = myclone(store)\" *ngFor=\"let store of stores\">\n                                  <table>\n                                      <tr>\n                                        <th style=\"width: 50px; text-align: left;\"><img class=\"imageClass\" [src]=\"store.thumbnailUrl\"/></th>\n                                        <th style=\"width: 380px; text-align: left; font-size:2vw\">\n                                          Product {{store.id}}\n                                          <tr style=\"font-size:1vw;\">\n                                            Name : {{store.name}}\n                                        </tr>\n                                          <tr style=\"font-size:1vw;\">\n                                              Description: {{store.description}}\n                                          </tr>\n                                          <tr style=\"font-size:1vw;\">\n                                            Date: {{store.creationDate}}\n                                        </tr>\n                                        </th>\n                                        <th style=\"text-align: right;\">\n                                            <button class=\"btn\" id=\"btndelete\">\n                                                Delete\n                                            </button>\n                                        </th>\n                                      </tr>\n                                  </table>\n                            </div>\n                        </form>\n            </div>\n      </div>\n    </div>\n      \n      <div class=\"split right\">\n        <form #info=\"ngForm\">\n          <div class=\"panel1\">\n                  <h3 style=\"font-size:3vw;\" class=\"panel-title\">Product {{current_store.id}} details</h3>\n                              <p><img class=\"imageClass1\" style=\"height: 100px; width: 150px;\" [src]=\"current_store.url\"/></p>\n                              <p style=\"font-size:1vw;\">Name</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"name\" \n                                required [(ngModel)]=\"current_store.name\" name=\"name\"\n                                #name=\"ngModel\">\n                                <div\n                                [hidden]=\"name.valid || name.pristine\"\n                                class=\"alert\">\n                                name is required\n                              </div>\n                              <p style=\"font-size:1vw;\" >Description</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"description\" \n                                required [(ngModel)]=\"current_store.description\" name=\"description\"\n                                #description=\"ngModel\">\n                                <div\n                                [hidden]=\"description.valid || description.pristine\"\n                                class=\"alert\">\n                                description is required\n                              </div>\n                              <p style=\"font-size:1vw;\">Price</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"price\" \n                                required \n                                pattern=\"^$|^([1-9][0-9]*)?\"\n                                [(ngModel)]=\"current_store.price\" name=\"price\"\n                                #price=\"ngModel\">\n                                <div\n                                [hidden]=\"price.valid || price.pristine\"\n                                class=\"alert\">\n                                price greater then 0 is required\n                              </div>\n                                  <div\n                                name=\"id\" \n                                [(ngModel)]=\"current_store.id\" name=\"id\"\n                                #id=\"ngModel\">\n                                  </div>\n                              <p><button class=\"btn\" [disabled]=\"!info.valid\" (click)=\"SavedData(info)\" id=\"savebutton\">Save</button></p>\n          </div>\n        </form>\n    </div> "
+module.exports = "      <div class=\"split left\">\n        <div class=\"panel panel-primary\">\n                      <div class=\"panel-heading\" id=\"grad1\">\n                          <h2 style=\"font-size:3vw;\" class=\"panel-title\">My Store</h2>\n                            <button class=\"btn\" id=\"addbutton\">\n                                      <i class=\"fa fa-plus\"></i> Add\n                            </button>\n                        <div class=\"nav\">\n                            <div class=\"search-container\">\n                                <input type=\"text\" [(ngModel)]=\"searching\" placeholder=\"Search Products\" name=\"search\">\n                                <button type=\"submit\" (click)=\"search()\">\n                                          <i class=\"fa fa-search\" style=\"font-size:12px;\"></i>\n                                </button>\n                                <span class=\"slider round\"></span>\n                            </div>\n                        </div>\n\n                        <p style=\n                        \"position: absolute;\n                        font-family: Arial;\n                        right: 150px;\n                        top: 53px;\">Sort By</p>\n                        \n                          <div class=\"custom-select\">\n                                <select [(ngModel)]=\"sorting\" (ngModelChange)='sort($event)'>\n                                  <option value=\"0\" >Name</option>\n                                  <option value=\"1\" >Price</option>\n                                  <option value=\"2\" >Recently Added\n                                  </option>\n                                </select>\n                          </div>\n\n                        <form #Primary=\"ngForm\">\n                              <div style=\"overflow-x:auto;\" class=\"panel-body\" (click)=\"current_store = myclone(store)\" *ngFor=\"let store of stores\">\n                                  <table>\n                                      <tr>\n                                        <th style=\"width: 50px; text-align: left;\"><img class=\"imageClass\" [src]=\"store.thumbnailUrl\"/></th>\n                                        <th style=\"width: 380px; text-align: left; font-size:2vw\">\n                                          Product {{store.id}}\n                                          <tr style=\"font-size:1vw;\">\n                                            Name : {{store.name}}\n                                        </tr>\n                                          <tr style=\"font-size:1vw;\">\n                                              Description: {{store.description}}\n                                          </tr>\n                                          <tr style=\"font-size:1vw;\">\n                                            Date: {{store.creationDate}}\n                                        </tr>\n                                        </th>\n                                        <th style=\"text-align: right;\">\n                                            <button class=\"btn\" id=\"btndelete\">\n                                                Delete\n                                            </button>\n                                        </th>\n                                      </tr>\n                                  </table>\n                            </div>\n                        </form>\n            </div>\n      </div>\n    </div>\n      \n      <div class=\"split right\">\n        <form #info=\"ngForm\">\n          <div class=\"panel1\">\n                  <h3 style=\"font-size:3vw;\" class=\"panel-title\">Product {{current_store.id}} details</h3>\n                              <p><img class=\"imageClass1\" [src]=\"current_store.url\"/></p>\n                              <p style=\"font-size:1vw;\">Name</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"name\" \n                                required [(ngModel)]=\"current_store.name\" name=\"name\"\n                                #name=\"ngModel\">\n                                <div\n                                [hidden]=\"name.valid || name.pristine\"\n                                class=\"alert\">\n                                name is required\n                              </div>\n                              <p style=\"font-size:1vw;\" >Description</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"description\" \n                                required [(ngModel)]=\"current_store.description\" name=\"description\"\n                                #description=\"ngModel\">\n                                <div\n                                [hidden]=\"description.valid || description.pristine\"\n                                class=\"alert\">\n                                description is required\n                              </div>\n                              <p style=\"font-size:1vw;\">Price</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"price\" \n                                required \n                                pattern=\"^$|^([1-9][0-9]*)?\"\n                                [(ngModel)]=\"current_store.price\" name=\"price\"\n                                #price=\"ngModel\">\n                                <div\n                                [hidden]=\"price.valid || price.pristine\"\n                                class=\"alert\">\n                                price greater then 0 is required\n                              </div>\n                                  <div\n                                name=\"id\" \n                                [(ngModel)]=\"current_store.id\" name=\"id\"\n                                #id=\"ngModel\">\n                                  </div>\n                              <p><button class=\"btn\" [disabled]=\"!info.valid\" (click)=\"SavedData(info)\" id=\"savebutton\">Save</button></p>\n          </div>\n        </form>\n    </div> "
 
 /***/ }),
 
@@ -216,7 +213,6 @@ var ListStoreComponent = /** @class */ (function () {
     ListStoreComponent.prototype.SavedData = function (storeForm) {
         var Flag = 0;
         for (var i = 0; i < this.stores.length; i++) {
-            console.log("this.stores[i].name |" + this.stores[i].name + " $ storeForm.value.name |" + storeForm.value.name);
             if (this.stores[i].id == storeForm.value.id) {
                 this.stores[i].name = storeForm.value.name;
                 this.stores[i].description = storeForm.value.description;
@@ -290,69 +286,6 @@ var ListStoreComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/store/mystore.component.css":
-/*!*********************************************!*\
-  !*** ./src/app/store/mystore.component.css ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/store/mystore.component.html":
-/*!**********************************************!*\
-  !*** ./src/app/store/mystore.component.html ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  mystore works!\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/store/mystore.component.ts":
-/*!********************************************!*\
-  !*** ./src/app/store/mystore.component.ts ***!
-  \********************************************/
-/*! exports provided: MystoreComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MystoreComponent", function() { return MystoreComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var MystoreComponent = /** @class */ (function () {
-    function MystoreComponent() {
-    }
-    MystoreComponent.prototype.ngOnInit = function () {
-    };
-    MystoreComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-mystore',
-            template: __webpack_require__(/*! ./mystore.component.html */ "./src/app/store/mystore.component.html"),
-            styles: [__webpack_require__(/*! ./mystore.component.css */ "./src/app/store/mystore.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], MystoreComponent);
-    return MystoreComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -414,7 +347,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Yuval\St\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Yuval\StoreSite\src\main.ts */"./src/main.ts");
 
 
 /***/ })
