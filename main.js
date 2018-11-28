@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-list-movies></app-list-movies>"
+module.exports = "<app-list-store></app-list-store>\n"
 
 /***/ }),
 
@@ -65,7 +65,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'Cinema';
+        this.title = 'StoreSite';
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -93,11 +93,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _movies_list_movies_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./movies/list-movies.component */ "./src/app/movies/list-movies.component.ts");
-/* harmony import */ var _movies_alert_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./movies/alert.component */ "./src/app/movies/alert.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _store_mystore_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store/mystore.component */ "./src/app/store/mystore.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _store_list_store_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./store/list-store.component */ "./src/app/store/list-store.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -106,7 +106,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 
-//import { RouterModule, Routes } from '@angular/core'; 
 
 
 
@@ -118,17 +117,17 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _movies_list_movies_component__WEBPACK_IMPORTED_MODULE_5__["ListMoviesComponent"],
-                _movies_alert_component__WEBPACK_IMPORTED_MODULE_6__["AlertComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _store_mystore_component__WEBPACK_IMPORTED_MODULE_4__["MystoreComponent"],
+                _store_list_store_component__WEBPACK_IMPORTED_MODULE_6__["ListStoreComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -138,109 +137,40 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/movies/alert.component.css":
-/*!********************************************!*\
-  !*** ./src/app/movies/alert.component.css ***!
-  \********************************************/
+/***/ "./src/app/store/list-store.component.css":
+/*!************************************************!*\
+  !*** ./src/app/store/list-store.component.css ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  .callout {\r\n    border-radius: 50px;\r\n    position: fixed;\r\n    bottom: 75px;\r\n    right: 400px;\r\n    margin-left: 100px;\r\n    max-width: 300px;\r\n  }\r\n  \r\n  .callout-header {\r\n    font-weight: bold;\r\n    padding: 45px 35px;\r\n    background-image: linear-gradient(rgb(255, 0, 0), rgb(155, 0, 0));\r\n    font-size: 35px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n    color: rgb(255, 255, 255);\r\n    text-align: center;\r\n  }\r\n  \r\n  .callout-container {\r\n    padding: 50px;\r\n    background-image: linear-gradient(rgb(155, 0, 0), rgb(50, 0, 0));\r\n    font-family: 'Times New Roman', Times, serif;\r\n    font-size: 30px;\r\n    color: rgb(255, 255, 255);\r\n    text-align: center;\r\n    \r\n  }\r\n  \r\n  .closebtn {\r\n    position: absolute;\r\n    top: 5px;\r\n    right: 15px;\r\n    color: white;\r\n    font-size: 30px;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .closebtn:hover {\r\n    color: rgb(0, 0, 0);\r\n  }\r\n  "
+module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/movies/alert.component.html":
-/*!*********************************************!*\
-  !*** ./src/app/movies/alert.component.html ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!--<div *ngIf=\"visible\">\r\n    <div class=\"alert_overlay\">\r\n        <div class=\"alert_content\">\r\n            <P class=\"{{alert_type}}\">{{text}}</P>\r\n            <span class=\"button\"><button class=\"btn\">OK</button></span>\r\n            <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span> \r\n        </div>\r\n    </div>\r\n</div>-->\r\n<div *ngIf=\"visible\">\r\n    <div class=\"callout\">\r\n        <div class=\"callout-header\">Error Message</div>\r\n            <span class=\"closebtn\" (click)=\"hide()\">x</span>\r\n        <div class=\"callout-container\">\r\n        <p>\r\n          {{text}}\r\n        </p>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
-
-/***/ }),
-
-/***/ "./src/app/movies/alert.component.ts":
-/*!*******************************************!*\
-  !*** ./src/app/movies/alert.component.ts ***!
-  \*******************************************/
-/*! exports provided: AlertComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertComponent", function() { return AlertComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var AlertComponent = /** @class */ (function () {
-    function AlertComponent() {
-        this.text = '';
-        this.visible = false;
-    }
-    AlertComponent.prototype.ngOnInit = function () {
-    };
-    AlertComponent.prototype.show = function (h) {
-        this.text = h;
-        this.visible = true;
-    };
-    AlertComponent.prototype.hide = function () {
-        this.visible = false;
-    };
-    AlertComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-alert',
-            template: __webpack_require__(/*! ./alert.component.html */ "./src/app/movies/alert.component.html"),
-            styles: [__webpack_require__(/*! ./alert.component.css */ "./src/app/movies/alert.component.css")]
-        })
-    ], AlertComponent);
-    return AlertComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/movies/list-movies.component.css":
-/*!**************************************************!*\
-  !*** ./src/app/movies/list-movies.component.css ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".imageClass{\r\n    width:200px;\r\n    height:300px;\r\n}\r\n.colorClass1{\r\nbackground-color: cornflowerblue;\r\n}\r\n.colorClass2{\r\n    background-color: rgba(34, 202, 34, 0.637);\r\n}\r\n.colorClass3{\r\n    background-color: rgb(58, 57, 0);\r\n}\r\n\r\n"
-
-/***/ }),
-
-/***/ "./src/app/movies/list-movies.component.html":
-/*!***************************************************!*\
-  !*** ./src/app/movies/list-movies.component.html ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class=\"panel panel-primary\" *ngFor=\"let movie of movies\">\n    <div class=\"panel-heading\" id=\"grad1\">\n      <h3 class=\"panel-title\">{{movie.Title}}</h3>\n    </div>\n    \n    <div class=\"panel-body bg-primary\">\n      <div class=\"col-10\">\n        <div class=\"row\">\n          <div class=\"col-xs-3\">\n            <img class=\"imageClass\" [src]=\"movie.Poster\"/>\n          </div>\n          <div class=\"col-xs-8\">\n  \n          <div class=\"row\">\n              <div class=\"col-xs-6\">\n                  <h3>Year</h3>\n              </div>\n              <div class=\"col-xs-6\">\n                  <h3>{{movie.Year}}</h3>\n              </div>\n            </div>\n  \n            <div class=\"row\">\n                <div class=\"col-xs-6\">\n                    <h3>Runtime</h3>\n                </div>\n                <div class=\"col-xs-6\">\n                    <h3>{{movie.Runtime}}</h3>\n                </div>\n              </div>\n  \n              <div class=\"row\">\n                  <div class=\"col-xs-6\">\n                    <h3>Genre</h3>\n                  </div>\n                  <div class=\"col-xs-6\">\n                    <h3>{{movie.Genre}}</h3>\n                  </div>\n                </div>\n  \n                <div class=\"row\">\n                    <div class=\"col-xs-6\">\n                      <h3>Director</h3>\n                    </div>\n                    <div class=\"col-xs-6\">\n                      <h3>{{movie.Director}}</h3>\n                    </div>\n                  </div>\n          </div>\n  \n          </div>\n        </div>\n      </div>\n      <div class=\"panel-footer\" id=\"grad2\"> \n          <div class=\"btn-group btn-group-lg\">\n              <button class=\"btn btn-success\" ion-item *ngIf=\"this.movie==movies[movies.length-1]\" (click)=\"current_movie = myclone(movie)\" data-toggle=\"modal\" data-target=\"#myModal3\">\n                  <span class=\"glyphicon glyphicon-pencil\"></span> Add Movie \n              </button>\n              <button class=\"btn btn-warning\" (click)=\"current_movie = myclone(movie)\" data-toggle=\"modal\" data-target=\"#myModal1\">\n              <span class=\"glyphicon glyphicon-pencil\"></span> Edit Movie \n            </button>\n            <button class=\"btn btn-danger\" (click)=\"current_movie = myclone(movie)\" data-toggle=\"modal\" data-target=\"#myModal2\">\n                <span class=\"glyphicon glyphicon-remove\"></span> Delete Movie\n              </button>\n          </div>\n        </div>\n</div>\n <!--ion-item *ngIf=\"this.movie==movies[movies.length-1]\">-->\n<form #EditForm=\"ngForm\">\n  <div class=\"modal fade\" id=\"myModal1\" role=\"dialog\">\n      <div class=\"modal-dialog\">\n      \n        <div class=\"modal-content\">\n          <div class=\"modal-header p-3 mb-2 bg-primary text-white\">\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            <h4 class=\"modal-title\">Edit movie: {{current_movie.Title}}</h4>\n          </div>\n          <div class=\"modal-body\">\n            <div class=\"form-group\">\n                <label for=\"Y\">Year</label>\n                <input type=\"text\" class=\"form-control\" id=\"Y\" \n                  required\n                  minlength=\"4\" maxlength=\"4\" pattern=\"^$|^([0-9]|[1][0-9][0-9][0-9]|[2][0][0-1][0-8])?\"\n                    [(ngModel)]=\"current_movie.Year\" name=\"Y\"\n                    #Y=\"ngModel\">\n                    <div\n                    [hidden]=\"Y.valid || Y.pristine\"\n                    class=\"alert alert-danger\">\n                    Valid Year is required\n                  </div>\n                  <div *ngIf=\"Y.errors?.minlength\"\n                    class=\"alert alert-danger\">\n                    Year must be at least 4 digits long\n                  </div>\n              </div>\n            <div class=\"form-group\">\n                <label for=\"Runtime\">Runtime</label>\n                <input type=\"text\" class=\"form-control\" id=\"Runtime\" \n                  required\n                    [(ngModel)]=\"current_movie.Runtime\" name=\"Runtime\"\n                    #Runtime=\"ngModel\">\n                    <div\n                    [hidden]=\"Runtime.valid || Runtime.pristine\"\n                    class=\"alert alert-danger\">\n                    Runtime is required\n                  </div>\n              </div>\n            <div class=\"form-group\">\n              <label for=\"Genre\">Genre</label>\n              <input type=\"text\" class=\"form-control\" id=\"Genre\" \n                required\n                  [(ngModel)]=\"current_movie.Genre\" name=\"Genre\"\n                  #Genre=\"ngModel\">\n                  <div\n                  [hidden]=\"Genre.valid || Genre.pristine\"\n                  class=\"alert alert-danger\">\n                  Genre is required\n                 </div>\n            </div>\n            <div class=\"form-group\">\n              <label for=\"Director\">Director</label>\n              <input type=\"text\" class=\"form-control\" id=\"Director\" \n                required\n                  [(ngModel)]=\"current_movie.Director\" name=\"Director\"\n                  #Director=\"ngModel\">\n                  <div\n                  [hidden]=\"Director.valid || Director.pristine\"\n                  class=\"alert alert-danger\">\n                  Director is required\n                 </div>\n            </div>\n        </div>\n          <div class=\"modal-footer\">\n            <button type=\"submit\"  class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"saveEmployee(EditForm)\">\n                <span class=\"glyphicon glyphicon-ok\"></span> Save Changes \n            </button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </form>\n<!--[disabled]=\"!EditForm.valid\"-->\n  <form #AddForm=\"ngForm\">\n      <div class=\"modal fade\" id=\"myModal3\" role=\"dialog\">\n          <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header p-3 mb-2 bg-primary text-white\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n                <h4 class=\"modal-title\">Add new Movie</h4>\n              </div>\n              <div class=\"modal-body\">\n                <div class=\"form-group\">\n                  <label for=\"Title\">Title</label>\n                  <input type=\"title\" class=\"form-control\" id=\"Title\" \n                    required \n                      [(ngModel)]=\"k\" name=\"Title\"\n                      #Title=\"ngModel\">\n                      <div\n                      [hidden]=\"Title.valid || Title.pristine\"\n                      class=\"alert alert-danger\">\n                      Title is required\n                      </div>\n\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"Year\">Year</label>\n                  <input type=\"text\" class=\"form-control\" id=\"Year\"\n                    required \n                    minlength=\"4\" maxlength=\"4\" pattern=\"^$|^([0-9]|[1][0-9][0-9][0-9]|[2][0][0-1][0-8])?\"\n                      [(ngModel)]=\"r\" name=\"Year\"\n                      #Year=\"ngModel\">\n                      <div\n                      [hidden]=\"Year.valid || Year.pristine\"\n                      class=\"alert alert-danger\">\n                      Valid Year is required\n                      </div>\n                      <div *ngIf=\"Year.errors?.minlength\"\n                        class=\"alert alert-danger\">\n                        Year must be at least 4 digits long\n                      </div>\n                </div>\n            </div>\n              <div class=\"modal-footer\">\n                <button type=\"submit\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"AddNewMovie(AddForm)\">\n                    <span class=\"glyphicon glyphicon-ok\"></span> Save Changes \n                </button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </form>\n  \n  <form #DeleteForm=\"ngForm\">\n  <div class=\"modal fade\" id=\"myModal2\" role=\"dialog\">\n      <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n          <div class=\"modal-footer\" id=\"grad3\">\n              <h4 class=\"modal-title\">Delete Movie : {{current_movie.Title}} ?</h4>\n            <br><br>\n            <button type=\"submit\" value=\"OK\" data-dismiss=\"modal\" (click)=\"deleteMovie(DeleteForm)\" class=\"btn btn-danger\">\n                <span class=\"glyphicon glyphicon-remove\"></span> OK \n              </button>\n              <button type=\"submit\" value=\"Cancel\" class=\"btn btn-success pull-down\" data-dismiss=\"modal\">\n                  <span class=\"glyphicon glyphicon-remove\"></span> Cancel\n                </button>\n          </div>\n        </div>\n        \n      </div>\n    </div>\n  </form>\n  \n<app-alert></app-alert>"
-
-/***/ }),
-
-/***/ "./src/app/movies/list-movies.component.ts":
+/***/ "./src/app/store/list-store.component.html":
 /*!*************************************************!*\
-  !*** ./src/app/movies/list-movies.component.ts ***!
+  !*** ./src/app/store/list-store.component.html ***!
   \*************************************************/
-/*! exports provided: ListMoviesComponent */
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "      <div class=\"split left\">\n        <div class=\"panel panel-primary\">\n                      <div class=\"panel-heading\" id=\"grad1\">\n                          <h2 class=\"panel-title\">My Store</h2>\n                            <button class=\"btn\" id=\"addbutton\">\n                                      <i class=\"fa fa-plus\"></i> Add\n                            </button>\n                        <div class=\"nav\">\n                            <div class=\"search-container\">\n                                <input type=\"text\" [(ngModel)]=\"searching\" placeholder=\"Search Products\" name=\"search\">\n                                <button type=\"submit\" (click)=\"search()\">\n                                          <i class=\"fa fa-search\" style=\"font-size:12px;\"></i>\n                                </button>\n                                <span class=\"slider round\"></span>\n                            </div>\n                        </div>\n\n                        <p style=\n                        \"position: absolute;\n                        font-family: Arial;\n                        right: 150px;\n                        top: 53px;\">Sort By</p>\n                        \n                          <div class=\"custom-select\">\n                                <select [(ngModel)]=\"sorting\" (ngModelChange)='sort($event)'>\n                                  <option value=\"0\" >Name</option>\n                                  <option value=\"1\" >Price</option>\n                                  <option value=\"2\" >Recently Added\n                                  </option>\n                                </select>\n                          </div>\n\n                        <form #Primary=\"ngForm\">\n                              <div style=\"overflow-x:auto;\" class=\"panel-body\" (click)=\"current_store = myclone(store)\" *ngFor=\"let store of stores\">\n                                  <table>\n                                      <tr>\n                                        <th style=\"width: 50px; text-align: left;\"><img class=\"imageClass\" [src]=\"store.thumbnailUrl\"/></th>\n                                        <th style=\"width: 380px; text-align: left; font-size:2vw\">\n                                          Product {{store.id}}\n                                          <tr style=\"font-size:1vw;\">\n                                            Name : {{store.name}}\n                                        </tr>\n                                          <tr style=\"font-size:1vw;\">\n                                              Description: {{store.description}}\n                                          </tr>\n                                          <tr style=\"font-size:1vw;\">\n                                            Date: {{store.creationDate}}\n                                        </tr>\n                                        </th>\n                                        <th style=\"text-align: right;\">\n                                            <button class=\"btn\" id=\"btndelete\">\n                                                Delete\n                                            </button>\n                                        </th>\n                                      </tr>\n                                  </table>\n                            </div>\n                        </form>\n            </div>\n      </div>\n    </div>\n      \n      <div class=\"split right\">\n        <form #info=\"ngForm\">\n          <div class=\"panel1\">\n                  <h3 style=\"font-size:3vw;\" class=\"panel-title\">Product {{current_store.id}} details</h3>\n                              <p><img class=\"imageClass1\" style=\"height: 100px; width: 150px;\" [src]=\"current_store.url\"/></p>\n                              <p style=\"font-size:1vw;\">Name</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"name\" \n                                required [(ngModel)]=\"current_store.name\" name=\"name\"\n                                #name=\"ngModel\">\n                                <div\n                                [hidden]=\"name.valid || name.pristine\"\n                                class=\"alert\">\n                                name is required\n                              </div>\n                              <p style=\"font-size:1vw;\" >Description</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"description\" \n                                required [(ngModel)]=\"current_store.description\" name=\"description\"\n                                #description=\"ngModel\">\n                                <div\n                                [hidden]=\"description.valid || description.pristine\"\n                                class=\"alert\">\n                                description is required\n                              </div>\n                              <p style=\"font-size:1vw;\">Price</p>\n                              <input style=\"width: 100%; height: 20px; border:3px solid rgb(0, 0, 0);\" type=\"text\" name=\"price\" \n                                required \n                                pattern=\"^$|^([1-9][0-9]*)?\"\n                                [(ngModel)]=\"current_store.price\" name=\"price\"\n                                #price=\"ngModel\">\n                                <div\n                                [hidden]=\"price.valid || price.pristine\"\n                                class=\"alert\">\n                                price greater then 0 is required\n                              </div>\n                                  <div\n                                name=\"id\" \n                                [(ngModel)]=\"current_store.id\" name=\"id\"\n                                #id=\"ngModel\">\n                                  </div>\n                              <p><button class=\"btn\" [disabled]=\"!info.valid\" (click)=\"SavedData(info)\" id=\"savebutton\">Save</button></p>\n          </div>\n        </form>\n    </div> "
+
+/***/ }),
+
+/***/ "./src/app/store/list-store.component.ts":
+/*!***********************************************!*\
+  !*** ./src/app/store/list-store.component.ts ***!
+  \***********************************************/
+/*! exports provided: ListStoreComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListMoviesComponent", function() { return ListMoviesComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListStoreComponent", function() { return ListStoreComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _alert_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./alert.component */ "./src/app/movies/alert.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -252,116 +182,171 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
-var ListMoviesComponent = /** @class */ (function () {
-    function ListMoviesComponent(http) {
+var ListStoreComponent = /** @class */ (function () {
+    function ListStoreComponent(http) {
         this.http = http;
-        this.movies = [];
-        this.current_movie = {
-            id: this.id + 1,
-            Title: '',
-            Year: '',
-            Runtime: '',
-            Genre: '',
-            Director: '',
-            Poster: ''
+        this.Flag = 0;
+        this.stores = [];
+        this.tempstores = [];
+        this.current_store = {
+            id: 0,
+            name: '',
+            description: '',
+            price: 0,
+            creationDate: this.date,
+            thumbnailUrl: '',
+            url: ''
         };
     }
-    ListMoviesComponent.prototype.ngOnInit = function () {
-        this.GetMovieData();
+    ListStoreComponent.prototype.ngOnInit = function () {
+        this.GetAll();
+        this.tempstores = this.stores;
     };
-    ListMoviesComponent.prototype.OnEdit = function () {
-    };
-    ListMoviesComponent.prototype.myclone = function (movie) {
-        return Object.assign({}, movie);
-    };
-    ListMoviesComponent.prototype.saveEmployee = function (movieForm) {
-        var a = 1000;
-        var b = 2018;
-        var y = "Input for Year has wrong value";
-        var g = "Input for Genre has wrong value";
-        var r = "Input for Runtime has wrong value";
-        var d = "Input for Director has wrong value";
-        var stringarr = "Wrong Input in ";
-        var pattern = new RegExp("[^0-9]");
-        if (this.current_movie.Year < a || this.current_movie.Year > b || this.current_movie.Year == "" || pattern.test(this.current_movie.Year))
-            stringarr = stringarr + ",Year ";
-        if (this.current_movie.Genre == "")
-            stringarr = stringarr + ",Genre ";
-        if (this.current_movie.Runtime == "")
-            stringarr = stringarr + ",Runtime ";
-        if (this.current_movie.Director == "")
-            stringarr = stringarr + ",Director ";
-        if (stringarr != "Wrong Input in ")
-            this.modal.show(stringarr);
-        else {
-            for (var i = 0; i < this.movies.length; i++)
-                if (this.movies[i].Title == this.current_movie.Title) {
-                    this.movies[i] = this.myclone(this.current_movie);
-                    break;
-                }
-        }
-    };
-    ListMoviesComponent.prototype.deleteMovie = function (DeleteForm) {
-        for (var i = 0; i < this.movies.length; i++)
-            if (this.movies[i].Title == this.current_movie.Title) {
-                this.movies.splice(i, 1);
-                break;
-            }
-    };
-    ListMoviesComponent.prototype.GetMovieData = function () {
+    ListStoreComponent.prototype.GetAll = function () {
         var _this = this;
-        var i = 0;
-        var moviearr = [
-            "The Predator&2018", "Ant-Man and the Wasp&2018", "ready player one&2018", "Justice League&2017"
-        ];
-        for (var i_1 = 0; i_1 < moviearr.length; i_1++) {
-            this.http.get('https://www.omdbapi.com/?t=' + moviearr[i_1] + "&apikey=4c039a0f").subscribe(function (result) {
-                _this.movies.push(result);
-            });
-        }
-    };
-    ListMoviesComponent.prototype.GetMovieData2 = function (T, Y) {
-        var _this = this;
-        this.http.get('https://www.omdbapi.com/?t=' + T + "&y=" + Y + "&apikey=4c039a0f").subscribe(function (result) {
-            var s = "Same movie already exists, Movie wasnt added to list";
-            var t = "Movie wasnt found try searching again";
-            var Flag = 0;
-            if (result.Response != "False") {
-                for (var i = 0; i < _this.movies.length; i++) {
-                    console.log("FLag = " + Flag + " | movies[" + i + "] = " + _this.movies[i].Title + " || result.Title = " + result.Title);
-                    if (_this.movies[i].Title == result.Title) {
-                        Flag = 1;
-                        console.log("Same Title , Flage = " + Flag);
-                    }
-                }
-                if (Flag == 0)
-                    _this.movies.push(result);
-                else {
-                    _this.modal.show(s);
-                }
-            }
-            else {
-                _this.modal.show(t);
+        this.http.get('https://msbit-exam-products-store.firebaseio.com/products.json').subscribe(function (result) {
+            for (var i = 0; i < result.length; i++) {
+                _this.stores.push(result[i]);
             }
         });
     };
-    ListMoviesComponent.prototype.AddNewMovie = function (movieForm) {
-        this.GetMovieData2(movieForm.value.Title, movieForm.value.Year);
+    ListStoreComponent.prototype.myclone = function (store) {
+        return Object.assign({}, store);
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_alert_component__WEBPACK_IMPORTED_MODULE_2__["AlertComponent"]),
-        __metadata("design:type", _alert_component__WEBPACK_IMPORTED_MODULE_2__["AlertComponent"])
-    ], ListMoviesComponent.prototype, "modal", void 0);
-    ListMoviesComponent = __decorate([
+    ListStoreComponent.prototype.SavedData = function (storeForm) {
+        var Flag = 0;
+        for (var i = 0; i < this.stores.length; i++) {
+            console.log("this.stores[i].name |" + this.stores[i].name + " $ storeForm.value.name |" + storeForm.value.name);
+            if (this.stores[i].id == storeForm.value.id) {
+                this.stores[i].name = storeForm.value.name;
+                this.stores[i].description = storeForm.value.description;
+                this.stores[i].price = storeForm.value.price;
+                alert("Success, Thank you for updating product: " + this.stores[i].name);
+            }
+        }
+    };
+    ListStoreComponent.prototype.sort = function () {
+        if (this.sorting == 0) {
+            this.sortbyName();
+        }
+        if (this.sorting == 1) {
+            this.sortbyPrice();
+        }
+        if (this.sorting == 2) {
+            this.sortbyRecent();
+        }
+    };
+    ListStoreComponent.prototype.sortbyPrice = function () {
+        var temp;
+        for (var i = 0; i < this.stores.length; i++) {
+            for (var j = 0; j < this.stores.length - 1; j++) {
+                if (this.stores[j].price > this.stores[j + 1].price) {
+                    temp = this.stores[j + 1];
+                    this.stores[j + 1] = this.stores[j];
+                    this.stores[j] = temp;
+                }
+            }
+        }
+    };
+    ListStoreComponent.prototype.sortbyName = function () {
+        this.stores.sort(function (a, b) {
+            var x = a.description.toLowerCase();
+            var y = b.description.toLowerCase();
+            return x < y ? -1 : x > y ? 1 : 0;
+        });
+    };
+    ListStoreComponent.prototype.sortbyRecent = function () {
+        var temp;
+        for (var i = 0; i < this.stores.length; i++) {
+            for (var j = 0; j < this.stores.length - 1; j++) {
+                if (this.stores[j + 1].id > this.stores[j].id) {
+                    temp = this.stores[j + 1];
+                    this.stores[j + 1] = this.stores[j];
+                    this.stores[j] = temp;
+                }
+            }
+        }
+    };
+    ListStoreComponent.prototype.search = function () {
+        for (var i = 0; i < this.stores.length; i++) {
+            if (this.stores[i].description.indexOf(this.searching) == -1) {
+                this.stores.splice(i, 1);
+                i--;
+            }
+        }
+    };
+    ListStoreComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-list-movies',
-            template: __webpack_require__(/*! ./list-movies.component.html */ "./src/app/movies/list-movies.component.html"),
-            styles: [__webpack_require__(/*! ./list-movies.component.css */ "./src/app/movies/list-movies.component.css")],
+            selector: 'app-list-store',
+            template: __webpack_require__(/*! ./list-store.component.html */ "./src/app/store/list-store.component.html"),
+            styles: [__webpack_require__(/*! ./list-store.component.css */ "./src/app/store/list-store.component.css")]
         }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
-    ], ListMoviesComponent);
-    return ListMoviesComponent;
+    ], ListStoreComponent);
+    return ListStoreComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/store/mystore.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/store/mystore.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/store/mystore.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/store/mystore.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  mystore works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/store/mystore.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/store/mystore.component.ts ***!
+  \********************************************/
+/*! exports provided: MystoreComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MystoreComponent", function() { return MystoreComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MystoreComponent = /** @class */ (function () {
+    function MystoreComponent() {
+    }
+    MystoreComponent.prototype.ngOnInit = function () {
+    };
+    MystoreComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-mystore',
+            template: __webpack_require__(/*! ./mystore.component.html */ "./src/app/store/mystore.component.html"),
+            styles: [__webpack_require__(/*! ./mystore.component.css */ "./src/app/store/mystore.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MystoreComponent);
+    return MystoreComponent;
 }());
 
 
@@ -429,7 +414,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Cinema\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Yuval\St\src\main.ts */"./src/main.ts");
 
 
 /***/ })
