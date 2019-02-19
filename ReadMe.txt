@@ -30,3 +30,13 @@
      Libraries:
 	The basic libraries of Angular are required.
 	These libraries are added when opening a new Angular project 
+
+------------------------------------------------------------------------
+
+ * Changes:
+   1. Database changes: 
+	a. column Away Team  was changed to Away_Team,
+	b. column Home Team was changed to Home_Team,
+	c. In column stadiums all the comma character "," was removed, for example : "Otkrytiye Arena, Moscow" was changed to "Otkrytiye Arena Moscow".
+
+	
