@@ -593,20 +593,20 @@ var WeatherComponent = /** @class */ (function () {
     };
     WeatherComponent.prototype.GetWeeklyWeatherData = function (num, next) {
         var _this = this;
-        this.http.get('http://dataservice.accuweather.com/forecasts/v1/daily/5day/' + num + '?apikey=' + this.apikey + '&metric=true').subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/forecasts/v1/daily/5day/' + num + '?apikey=' + this.apikey + '&metric=true').subscribe(function (result) {
             _this.AllWeather2 = result;
             next();
         });
     };
     WeatherComponent.prototype.GetWeeklyWeatherData1 = function (num) {
         var _this = this;
-        this.http.get('http://dataservice.accuweather.com/forecasts/v1/daily/5day/' + num + '?apikey=' + this.apikey + '&metric=true').subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/forecasts/v1/daily/5day/' + num + '?apikey=' + this.apikey + '&metric=true').subscribe(function (result) {
             _this.AllWeather2 = result;
         }, function (error) { alert("City key Error or Bad Request"); });
     };
     WeatherComponent.prototype.GetOneWeatherData = function (num, next) {
         var _this = this;
-        this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + num + '?apikey=' + this.apikey + '').subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/currentconditions/v1/' + num + '?apikey=' + this.apikey + '').subscribe(function (result) {
             _this.AllWeather1.push(result);
             _this.current_weather.Temperature = _this.AllWeather1[1][0].Temperature;
             _this.current_weather.WeatherIcon = _this.AllWeather1[1][0].WeatherIcon;
@@ -617,7 +617,7 @@ var WeatherComponent = /** @class */ (function () {
     WeatherComponent.prototype.GetOneWeatherData2 = function (num, next) {
         var _this = this;
         //let i = 0;
-        this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + num + '?apikey=' + this.apikey + '').subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/currentconditions/v1/' + num + '?apikey=' + this.apikey + '').subscribe(function (result) {
             _this.AllWeather1.push(result);
             _this.current_weather.Temperature.Metric.Value = _this.AllWeather1[2][0].Temperature.Metric.Value;
             _this.current_weather.WeatherIcon = _this.AllWeather1[3][0].WeatherIcon;
@@ -628,7 +628,7 @@ var WeatherComponent = /** @class */ (function () {
     WeatherComponent.prototype.GetOneWeatherData1 = function (num) {
         var _this = this;
         //let i = 0;
-        this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + num + '?apikey=' + this.apikey + '').subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/currentconditions/v1/' + num + '?apikey=' + this.apikey + '').subscribe(function (result) {
             _this.AllWeather1.push(result);
             _this.current_weather.Temperature = _this.AllWeather1[1][0].Temperature;
             _this.current_weather.WeatherIcon = _this.AllWeather1[1][0].WeatherIcon;
@@ -637,7 +637,7 @@ var WeatherComponent = /** @class */ (function () {
     };
     WeatherComponent.prototype.GetAutoCompleteSearchData = function (city, next) {
         var _this = this;
-        this.http.get('http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=' + this.apikey + '&q=' + city).subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=' + this.apikey + '&q=' + city).subscribe(function (result) {
             _this.AllWeather1.push(result);
             _this.current_weather.Key = _this.AllWeather1[0][0].Key;
             _this.current_weather.AdministrativeArea = _this.AllWeather1[0][0].AdministrativeArea;
@@ -647,7 +647,7 @@ var WeatherComponent = /** @class */ (function () {
     };
     WeatherComponent.prototype.GetAutoCompleteSearchData1 = function (city) {
         var _this = this;
-        this.http.get('http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=' + this.apikey + '&q=' + city).subscribe(function (result) {
+        this.http.get('https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=' + this.apikey + '&q=' + city).subscribe(function (result) {
             _this.AllWeather1.push(result);
             _this.current_weather.Key = _this.AllWeather1[0][0].Key;
             _this.current_weather.AdministrativeArea = _this.AllWeather1[0][0].AdministrativeArea;
