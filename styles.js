@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Weather\Weather\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Weather\Weather\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! C:\New Weather\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\New Weather\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })

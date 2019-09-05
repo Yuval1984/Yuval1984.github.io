@@ -96,12 +96,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _mainweather_weather_weather_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mainweather/weather/weather.component */ "./src/app/mainweather/weather/weather.component.ts");
-/* harmony import */ var _mainweather_favorites_favorites_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mainweather/favorites/favorites.component */ "./src/app/mainweather/favorites/favorites.component.ts");
-/* harmony import */ var _mainweather_weather_router_weather_router_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./mainweather/weather-router/weather-router.module */ "./src/app/mainweather/weather-router/weather-router.module.ts");
-/* harmony import */ var _mainweather_mainweather_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./mainweather/mainweather.component */ "./src/app/mainweather/mainweather.component.ts");
+/* harmony import */ var _weather_weather_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./weather/weather.component */ "./src/app/weather/weather.component.ts");
+/* harmony import */ var _favorites_favorites_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./favorites/favorites.component */ "./src/app/favorites/favorites.component.ts");
+/* harmony import */ var _weather_router_weather_router_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./weather-router/weather-router.module */ "./src/app/weather-router/weather-router.module.ts");
+/* harmony import */ var _mainweather_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./mainweather.component */ "./src/app/mainweather.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _mainweather_weather_service_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./mainweather/weather-service.service */ "./src/app/mainweather/weather-service.service.ts");
+/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./weather-service.service */ "./src/app/weather-service.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,18 +127,18 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _mainweather_weather_weather_component__WEBPACK_IMPORTED_MODULE_5__["WeatherComponent"],
-                _mainweather_favorites_favorites_component__WEBPACK_IMPORTED_MODULE_6__["FavoritesComponent"],
-                _mainweather_mainweather_component__WEBPACK_IMPORTED_MODULE_8__["MainweatherComponent"],
+                _weather_weather_component__WEBPACK_IMPORTED_MODULE_5__["WeatherComponent"],
+                _favorites_favorites_component__WEBPACK_IMPORTED_MODULE_6__["FavoritesComponent"],
+                _mainweather_component__WEBPACK_IMPORTED_MODULE_8__["MainweatherComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-                _mainweather_weather_router_weather_router_module__WEBPACK_IMPORTED_MODULE_7__["WeatherRouterModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_9__["RouterModule"].forRoot(_mainweather_weather_router_weather_router_module__WEBPACK_IMPORTED_MODULE_7__["appRoutes"])
+                _weather_router_weather_router_module__WEBPACK_IMPORTED_MODULE_7__["WeatherRouterModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_9__["RouterModule"].forRoot(_weather_router_weather_router_module__WEBPACK_IMPORTED_MODULE_7__["appRoutes"])
             ],
-            providers: [_mainweather_weather_service_service__WEBPACK_IMPORTED_MODULE_10__["WeatherServiceService"]],
+            providers: [_weather_service_service__WEBPACK_IMPORTED_MODULE_10__["WeatherServiceService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
         })
     ], AppModule);
@@ -149,10 +149,10 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mainweather/favorites/favorites.component.css":
-/*!***************************************************************!*\
-  !*** ./src/app/mainweather/favorites/favorites.component.css ***!
-  \***************************************************************/
+/***/ "./src/app/favorites/favorites.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/favorites/favorites.component.css ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -160,10 +160,10 @@ module.exports = "#block{\r\n    border-style: solid;\r\n    margin: 30px;\r\n  
 
 /***/ }),
 
-/***/ "./src/app/mainweather/favorites/favorites.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/mainweather/favorites/favorites.component.html ***!
-  \****************************************************************/
+/***/ "./src/app/favorites/favorites.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/favorites/favorites.component.html ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -171,10 +171,10 @@ module.exports = "<div class=\"{{data.Backgroundcolor==1?'colorchange':''}}\">\n
 
 /***/ }),
 
-/***/ "./src/app/mainweather/favorites/favorites.component.ts":
-/*!**************************************************************!*\
-  !*** ./src/app/mainweather/favorites/favorites.component.ts ***!
-  \**************************************************************/
+/***/ "./src/app/favorites/favorites.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/favorites/favorites.component.ts ***!
+  \**************************************************/
 /*! exports provided: FavoritesComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -182,7 +182,7 @@ module.exports = "<div class=\"{{data.Backgroundcolor==1?'colorchange':''}}\">\n
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FavoritesComponent", function() { return FavoritesComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../weather-service.service */ "./src/app/mainweather/weather-service.service.ts");
+/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../weather-service.service */ "./src/app/weather-service.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -222,8 +222,8 @@ var FavoritesComponent = /** @class */ (function () {
     FavoritesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-favorites',
-            template: __webpack_require__(/*! ./favorites.component.html */ "./src/app/mainweather/favorites/favorites.component.html"),
-            styles: [__webpack_require__(/*! ./favorites.component.css */ "./src/app/mainweather/favorites/favorites.component.css")]
+            template: __webpack_require__(/*! ./favorites.component.html */ "./src/app/favorites/favorites.component.html"),
+            styles: [__webpack_require__(/*! ./favorites.component.css */ "./src/app/favorites/favorites.component.css")]
         }),
         __metadata("design:paramtypes", [_weather_service_service__WEBPACK_IMPORTED_MODULE_1__["WeatherServiceService"]])
     ], FavoritesComponent);
@@ -234,10 +234,10 @@ var FavoritesComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mainweather/mainweather.component.css":
-/*!*******************************************************!*\
-  !*** ./src/app/mainweather/mainweather.component.css ***!
-  \*******************************************************/
+/***/ "./src/app/mainweather.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/mainweather.component.css ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -245,10 +245,10 @@ module.exports = ".navbartitle{\r\n    font-size: 15px;\r\n    color: white;\r\n
 
 /***/ }),
 
-/***/ "./src/app/mainweather/mainweather.component.html":
-/*!********************************************************!*\
-  !*** ./src/app/mainweather/mainweather.component.html ***!
-  \********************************************************/
+/***/ "./src/app/mainweather.component.html":
+/*!********************************************!*\
+  !*** ./src/app/mainweather.component.html ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -256,10 +256,10 @@ module.exports = "<div class=\"row\">\n  <nav class=\"container-fluid navbar nav
 
 /***/ }),
 
-/***/ "./src/app/mainweather/mainweather.component.ts":
-/*!******************************************************!*\
-  !*** ./src/app/mainweather/mainweather.component.ts ***!
-  \******************************************************/
+/***/ "./src/app/mainweather.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/mainweather.component.ts ***!
+  \******************************************/
 /*! exports provided: MainweatherComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -267,7 +267,7 @@ module.exports = "<div class=\"row\">\n  <nav class=\"container-fluid navbar nav
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainweatherComponent", function() { return MainweatherComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./weather-service.service */ "./src/app/mainweather/weather-service.service.ts");
+/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./weather-service.service */ "./src/app/weather-service.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -288,8 +288,8 @@ var MainweatherComponent = /** @class */ (function () {
     MainweatherComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-mainweather',
-            template: __webpack_require__(/*! ./mainweather.component.html */ "./src/app/mainweather/mainweather.component.html"),
-            styles: [__webpack_require__(/*! ./mainweather.component.css */ "./src/app/mainweather/mainweather.component.css")]
+            template: __webpack_require__(/*! ./mainweather.component.html */ "./src/app/mainweather.component.html"),
+            styles: [__webpack_require__(/*! ./mainweather.component.css */ "./src/app/mainweather.component.css")]
         }),
         __metadata("design:paramtypes", [_weather_service_service__WEBPACK_IMPORTED_MODULE_1__["WeatherServiceService"]])
     ], MainweatherComponent);
@@ -300,10 +300,10 @@ var MainweatherComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mainweather/weather-router/weather-router.module.ts":
-/*!*********************************************************************!*\
-  !*** ./src/app/mainweather/weather-router/weather-router.module.ts ***!
-  \*********************************************************************/
+/***/ "./src/app/weather-router/weather-router.module.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/weather-router/weather-router.module.ts ***!
+  \*********************************************************/
 /*! exports provided: appRoutes, WeatherRouterModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -313,8 +313,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeatherRouterModule", function() { return WeatherRouterModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _weather_weather_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../weather/weather.component */ "./src/app/mainweather/weather/weather.component.ts");
-/* harmony import */ var _favorites_favorites_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../favorites/favorites.component */ "./src/app/mainweather/favorites/favorites.component.ts");
+/* harmony import */ var _weather_weather_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../weather/weather.component */ "./src/app/weather/weather.component.ts");
+/* harmony import */ var _favorites_favorites_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../favorites/favorites.component */ "./src/app/favorites/favorites.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -347,10 +347,10 @@ var WeatherRouterModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mainweather/weather-service.service.ts":
-/*!********************************************************!*\
-  !*** ./src/app/mainweather/weather-service.service.ts ***!
-  \********************************************************/
+/***/ "./src/app/weather-service.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/weather-service.service.ts ***!
+  \********************************************/
 /*! exports provided: WeatherServiceService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -431,10 +431,10 @@ var WeatherServiceService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mainweather/weather/weather.component.css":
-/*!***********************************************************!*\
-  !*** ./src/app/mainweather/weather/weather.component.css ***!
-  \***********************************************************/
+/***/ "./src/app/weather/weather.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/weather/weather.component.css ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -442,10 +442,10 @@ module.exports = ".navbartitle{\r\n    color:white;\r\n}\r\n.btn-group-toggle{\r
 
 /***/ }),
 
-/***/ "./src/app/mainweather/weather/weather.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/mainweather/weather/weather.component.html ***!
-  \************************************************************/
+/***/ "./src/app/weather/weather.component.html":
+/*!************************************************!*\
+  !*** ./src/app/weather/weather.component.html ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -453,10 +453,10 @@ module.exports = "\n<div class=\"{{data.Backgroundcolor==1?'colorchange':''}}\">
 
 /***/ }),
 
-/***/ "./src/app/mainweather/weather/weather.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/mainweather/weather/weather.component.ts ***!
-  \**********************************************************/
+/***/ "./src/app/weather/weather.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/weather/weather.component.ts ***!
+  \**********************************************/
 /*! exports provided: WeatherComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -465,7 +465,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WeatherComponent", function() { return WeatherComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../weather-service.service */ "./src/app/mainweather/weather-service.service.ts");
+/* harmony import */ var _weather_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../weather-service.service */ "./src/app/weather-service.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -692,8 +692,8 @@ var WeatherComponent = /** @class */ (function () {
     WeatherComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-weather',
-            template: __webpack_require__(/*! ./weather.component.html */ "./src/app/mainweather/weather/weather.component.html"),
-            styles: [__webpack_require__(/*! ./weather.component.css */ "./src/app/mainweather/weather/weather.component.css")]
+            template: __webpack_require__(/*! ./weather.component.html */ "./src/app/weather/weather.component.html"),
+            styles: [__webpack_require__(/*! ./weather.component.css */ "./src/app/weather/weather.component.css")]
         }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _weather_service_service__WEBPACK_IMPORTED_MODULE_2__["WeatherServiceService"]])
     ], WeatherComponent);
@@ -765,7 +765,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Weather\Weather\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\New Weather\src\main.ts */"./src/main.ts");
 
 
 /***/ })
