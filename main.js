@@ -491,7 +491,7 @@ var WeatherComponent = /** @class */ (function () {
         this.city = "Search A City";
         this.mycity = "tel aviv";
         this.Key = '1';
-        this.apikey = "23jANkQtcDxqjGF370sQjvAQsGdCBaDs";
+        this.apikey = "0gWfMt9i9hjwKJ7wOK7ElvdDLAluoyAg";
         this.Error = {
             error: {
                 Code: 0,
