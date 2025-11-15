@@ -1,0 +1,21 @@
+{
+  "name": "yuval1984-github-io",
+  "version": "1.0.0",
+  "description": "GitHub Pages site for yuval1984.github.io",
+  "scripts": {
+    "build": "echo 'Add your build command here (e.g., ng build --prod --base-href /)'",
+    "deploy": "git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin master",
+    "deploy:force": "git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin master --force",
+    "deploy:gh-pages": "gh-pages -d . -b master"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuval1984/yuval1984.github.io.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
